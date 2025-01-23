@@ -1,64 +1,71 @@
 # Predictive Maintenance for IoT Devices
 
 ## Project Overview
-This project focuses on developing a predictive maintenance system for IoT devices using datasets for industrial equipment, smart appliances, and general IoT systems. The goal is to predict device failures, minimize downtime, and improve operational efficiency through machine learning and real-time data analysis.
+This project implements a predictive maintenance system for IoT devices using machine learning models. It focuses on:
+- **CMAPSS Dataset**: Predicting Remaining Useful Life (RUL) for industrial equipment.
+- **Elevator Dataset**: Anomaly detection for elevator sensors.
+- **Environmental Sensor Data**: Identifying unusual patterns in IoT telemetry data.
+- **Smoke Detection Dataset**: Classifying fire alarm triggers based on sensor readings.
 
 ---
 
-## Project Structure
+## Repository Structure
 ```
-project-folder/
-├── data/                  # Placeholder for datasets (not included in the repository)
-│   ├── cmapss/           # CMAPSS Dataset
-│   ├── elevator/         # Elevator Predictive Maintenance Dataset
-│   ├── environmental/    # Environmental Sensor Telemetry Data
-│   └── smoke/            # Smoke Detection Dataset
-├── src/                   # Source code for data preprocessing, modeling, and deployment
-├── models/                # Trained machine learning models
-├── outputs/               # Generated outputs (e.g., predictions, visualizations)
-└── README.md              # Project documentation
+predictive-maintenance-iot/
+├── data/                  # Placeholder for datasets (add download instructions below)
+├── notebooks/             # Jupyter notebooks for exploratory work (if applicable)
+├── src/                   # Source code for modeling and utilities
+│   ├── cmapss_regression.py  # Linear regression model for CMAPSS dataset
+│   ├── data_preprocessing.py # Code for cleaning/normalizing datasets (optional)
+│   ├── advanced_models.py    # Advanced modeling scripts (if needed later)
+├── outputs/               # Outputs like feature importance CSVs or saved models
+├── README.md              # Documentation for the project
+├── requirements.txt       # Python dependencies for the project
+└── LICENSE                # License file (optional)
 ```
 
 ---
 
 ## Datasets
-### **1. CMAPSS Dataset**
-- **Description**: Industrial equipment data for Remaining Useful Life (RUL) prediction.
-- **Source**: [NASA Prognostics Data Repository](https://data.nasa.gov/)
+### 1. **CMAPSS Dataset**
+- **Description**: Sensor data for industrial equipment, used for Remaining Useful Life (RUL) prediction.
+- **Source**: NASA Prognostics Data Repository.
+- **Download Link**: [CMAPSS Dataset](https://data.nasa.gov/).
 
-### **2. Elevator Predictive Maintenance Dataset**
-- **Description**: Sensor data for elevator predictive maintenance.
-- **Source**: [Kaggle - Predictive Maintenance Dataset](https://www.kaggle.com/)
+### 2. **Elevator Dataset**
+- **Description**: Elevator sensor data for predictive maintenance.
+- **Source**: Kaggle or other repositories.
+- **Download Instructions**: Add to `data/` folder.
 
-### **3. Environmental Sensor Telemetry Data**
-- **Description**: Real-world IoT sensor data (e.g., temperature, humidity, CO levels).
-- **Source**: [Kaggle - Environmental Sensor Telemetry Dataset](https://www.kaggle.com/)
+### 3. **Environmental Sensor Data**
+- **Description**: IoT telemetry data with features like CO levels, temperature, and humidity.
+- **Download Link**: Public repositories or Kaggle datasets.
 
-
-### **4. Smoke Detection Dataset**
-- **Description**: Sensor data for detecting smoke and fire.
-- **Source**: [Kaggle - Smoke Detection Dataset](https://www.kaggle.com/)
+### 4. **Smoke Detection Dataset**
+- **Description**: Sensor data for fire alarm classification.
+- **Source**: Kaggle.
+- **Download Instructions**: Place in `data/` folder.
 
 ---
 
-## Getting Started
+## How to Run the Project
 
-### **Prerequisites**
+### Prerequisites
 Ensure you have the following installed:
 - Python 3.7+
 - Libraries listed in `requirements.txt`
 
-### **Installation Steps**
+### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/predictive-maintenance.git
-   cd predictive-maintenance
+   git clone https://github.com/ParthMore999/predictive-maintenance-iot.git
+   cd predictive-maintenance-iot
    ```
 
 2. Set up a virtual environment:
    ```bash
    python -m venv env
-   source env/bin/activate   # On Windows: env\Scripts\activate
+   source env/bin/activate  # On Windows: env\Scripts\activate
    ```
 
 3. Install dependencies:
@@ -66,36 +73,41 @@ Ensure you have the following installed:
    pip install -r requirements.txt
    ```
 
-4. Download the datasets (as per instructions above) and place them in the respective folders within `data/`.
+4. Place datasets in the `data/` folder following the structure above.
+
+### Running the Code
+
+#### **Linear Regression for CMAPSS Dataset**
+1. Navigate to the `src/` folder:
+   ```bash
+   cd src
+   ```
+
+2. Run the regression script:
+   ```bash
+   python cmapss_regression.py
+   ```
 
 ---
 
-## Usage
-
-### **Run the Pipeline**
-To run the full pipeline for predictive maintenance, execute:
-```bash
-python src/main.py
-```
-This will:
-- Preprocess the data.
-- Train machine learning models.
-- Generate predictions and alerts.
+## Results and Outputs
+- **Model Performance**: Metrics like MAE, MSE, and R² are printed for the CMAPSS regression model.
+- **Feature Importance**: A CSV file `feature_importance_cmapss.csv` is generated in the project directory.
 
 ---
 
-## Contributing
-Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
+## Contributions
+Contributions are welcome! If you encounter issues or have suggestions, feel free to open an issue or submit a pull request.
 
 ---
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See `LICENSE` for details.
 
 ---
 
 ## Contact
 For questions or support, contact:
-- **Parth More**: [moreparth999@gmail.com]
+- **Your Name**: [moreparth999.com]
 - **GitHub**: [https://github.com/ParthMore999]
 
