@@ -1,0 +1,9 @@
+Linear Regression Performance:
+Mean Absolute Error (MAE): 0.04925581334095232
+Mean Squared Error (MSE): 0.0037827213855548152
+R-squared (R²): 0.6784119538612395
+
+Random Forest Regressor Performance:
+Mean Absolute Error (MAE): 0.050159999030772895
+Mean Squared Error (MSE): 0.003938528769603102
+R-squared (R²): 0.6651659896193527
